@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import './MenuButton.dart';
+import './Shared/MenuButton.dart';
 
-class SpyFallHomePage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   static String title = "Welcome to Spyfall";
 
   Function onMenuPress;
 
-  SpyFallHomePage({this.onMenuPress});
+  HomePage({this.onMenuPress});
 
   final Container welcomeCmp = Container(
     height: 40,

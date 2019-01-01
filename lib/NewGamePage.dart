@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import './MenuButton.dart';
+import './Shared/MenuButton.dart';
 
-class GameOptions extends StatelessWidget {
+class NewGamePage extends StatelessWidget {
   static String title = "Start Game";
 
-  Function onMenuItemPressed;
+  final Function onMenuItemPressed;
 
-  GameOptions({this.onMenuItemPressed});
+  NewGamePage({this.onMenuItemPressed});
 
   final Container welcomeCmp = Container(
     height: 40,

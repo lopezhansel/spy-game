@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import './SpyFallHomePage.dart';
-import './GameOptions.dart';
+import './HomePage.dart';
+import './NewGamePage.dart';
+import './JoinGamePage.dart';
 
 void main() => runApp(MyApp());
 
@@ -38,15 +39,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget get currPage {
     switch (_currPage) {
       case Pages.HOME:
-        return SpyFallHomePage(
+        return HomePage(
           onMenuPress: this.goToPage,
         );
         break;
       case Pages.START_NEW_GAME:
-        return GameOptions(onMenuItemPressed: this.goToPage);
+        return NewGamePage(onMenuItemPressed: this.goToPage);
         break;
       case Pages.JOIN_GAME:
-        return GameOptions(onMenuItemPressed: this.goToPage);
+        return JoinGamePage(onMenuItemPressed: this.goToPage);
         break;
     }
   }
