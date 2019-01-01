@@ -13,18 +13,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Spyfall'),
+      home: Router(title: 'Spyfall'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class Router extends StatefulWidget {
   final String title;
 
-  MyHomePage({Key key, this.title}) : super(key: key);
+  Router({Key key, this.title}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _RouterState createState() => _RouterState();
 }
 
 enum Pages {
@@ -33,7 +33,7 @@ enum Pages {
   JOIN_GAME,
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _RouterState extends State<Router> {
   Pages _currPage = Pages.HOME;
 
   Widget get currPage {
