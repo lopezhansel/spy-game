@@ -4,6 +4,10 @@ import './MenuButton.dart';
 class SpyFallHomePage extends StatelessWidget {
   static String title = "Welcome to Spyfall";
 
+  Function onMenuPress;
+
+  SpyFallHomePage({this.onMenuPress});
+
   final Container welcomeCmp = Container(
     height: 40,
     child: Text(
@@ -16,7 +20,7 @@ class SpyFallHomePage extends StatelessWidget {
     ),
   );
 
-  static List<Widget> getMenuItems() {
+  List<Widget> getMenuItems() {
     var menu = ["", "New Game", "Join Game", ""];
 
     List<Widget> some = menu
@@ -24,24 +28,12 @@ class SpyFallHomePage extends StatelessWidget {
             ? Spacer()
             : MenuButton(
                 name: name,
+                onMenuItemPressed: onMenuPress,
               ))
         .toList();
 
     return some.toList();
   }
-
-  final Container menuWgt = Container(
-    height: 100,
-    child: Row(
-      children: getMenuItems(),
-    ),
-    decoration: const BoxDecoration(
-      border: Border(
-        bottom: BorderSide(width: 0.5, color: Color(0xFFFF000000)),
-        top: BorderSide(width: 0.5, color: Color(0xFFFF000000)),
-      ),
-    ),
-  );
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +41,21 @@ class SpyFallHomePage extends StatelessWidget {
       padding: EdgeInsets.all(20),
       alignment: Alignment.center,
       child: Column(
-        children: <Widget>[welcomeCmp, menuWgt],
+        children: <Widget>[
+          welcomeCmp,
+          Container(
+            height: 100,
+            child: Row(
+              children: getMenuItems(),
+            ),
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(width: 0.5, color: Color(0xFFFF000000)),
+                top: BorderSide(width: 0.5, color: Color(0xFFFF000000)),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }

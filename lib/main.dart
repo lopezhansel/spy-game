@@ -27,24 +27,49 @@ class MyHomePage extends StatefulWidget {
 }
 
 enum Pages {
-    HOME,
-    GAME_OPTIONS
-} 
+  HOME,
+  START_NEW_GAME,
+  JOIN_GAME,
+}
 
 class _MyHomePageState extends State<MyHomePage> {
-  Pages setPage = Pages.HOME;
+  Pages _currPage = Pages.HOME;
 
-  get currPage {
-    switch(setPage){
+  Widget get currPage {
+    switch (_currPage) {
       case Pages.HOME:
-        return SpyFallHomePage();
-      case Pages.GAME_OPTIONS:
-        return GameOptions();
+        return SpyFallHomePage(
+          onMenuPress: this.goToPage,
+        );
+        break;
+      case Pages.START_NEW_GAME:
+        return GameOptions(onMenuItemPressed: this.goToPage);
+        break;
+      case Pages.JOIN_GAME:
+        return GameOptions(onMenuItemPressed: this.goToPage);
+        break;
     }
   }
 
-  goToGameOptions(){
-    setPage = Pages.GAME_OPTIONS;
+  Pages getPageEnum(String name) {
+    switch (name) {
+      case "Go Back":
+        return Pages.HOME;
+        break;
+      case "Join Game":
+        return Pages.JOIN_GAME;
+        break;
+      case "New Game":
+        return Pages.START_NEW_GAME;
+        break;
+    }
+    return Pages.HOME;
+  }
+
+  void goToPage(String buttonName) {
+    setState(() {
+      _currPage = getPageEnum(buttonName);
+    });
   }
 
   @override
@@ -57,4 +82,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-

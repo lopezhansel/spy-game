@@ -2,18 +2,22 @@ import 'package:flutter/material.dart';
 
 class MenuButton extends StatefulWidget {
   final String name;
+  final Function onMenuItemPressed;
 
-  MenuButton({Key key, this.name}) : super(key: key);
+  MenuButton({Key key, this.name, this.onMenuItemPressed}) : super(key: key);
 
   @override
-  _MenuButton createState() => _MenuButton(name: name);
+  _MenuButton createState() =>
+      _MenuButton(name: name, onMenuItemPressed: onMenuItemPressed);
 }
 
 class _MenuButton extends State<MenuButton> {
   String name = '';
   bool _highlight = false;
 
-  _MenuButton({this.name});
+  Function onMenuItemPressed;
+
+  _MenuButton({this.name, this.onMenuItemPressed});
 
   toggleHighlight() {
     setState(() => _highlight = !_highlight);
@@ -24,8 +28,11 @@ class _MenuButton extends State<MenuButton> {
     return GestureDetector(
       onTap: () {
         toggleHighlight();
-        const duration = Duration(milliseconds: 100);
-        Future.delayed(duration, toggleHighlight);
+        const duration = Duration(milliseconds: 50);
+        Future.delayed(duration, () {
+          toggleHighlight();
+          widget.onMenuItemPressed(name);
+        });
       },
       child: Container(
         margin: EdgeInsets.all(5),
