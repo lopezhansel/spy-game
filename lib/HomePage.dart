@@ -49,8 +49,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(20),
-      // alignment: Alignment.center,
-
       child: Column(
         children: <Widget>[
           welcomeCmp,
