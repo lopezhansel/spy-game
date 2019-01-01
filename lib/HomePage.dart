@@ -20,41 +20,41 @@ class HomePage extends StatelessWidget {
     ),
   );
 
-  List<Widget> getMenuItems() {
-    var menu = ["", "New Game", "Join Game", ""];
+  static const _menuItems = ["New Game", "Join Game"];
 
-    List<Widget> some = menu
-        .map((name) => name == ""
-            ? Spacer()
-            : MenuButton(
-                name: name,
-                onMenuItemPressed: onMenuPress,
-              ))
+  Widget get menuItems {
+    var menu = _menuItems
+        .map((name) => MenuButton(
+              name: name,
+              onMenuItemPressed: onMenuPress,
+            ))
         .toList();
 
-    return some.toList();
+    return Container(
+      height: 100,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: menu,
+      ),
+      decoration: const BoxDecoration(
+        border: Border(
+          bottom: BorderSide(width: 0.5, color: Color(0xFFFF000000)),
+          top: BorderSide(width: 0.5, color: Color(0xFFFF000000)),
+        ),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(20),
-      alignment: Alignment.center,
+      // alignment: Alignment.center,
+
       child: Column(
         children: <Widget>[
           welcomeCmp,
-          Container(
-            height: 100,
-            child: Row(
-              children: getMenuItems(),
-            ),
-            decoration: const BoxDecoration(
-              border: Border(
-                bottom: BorderSide(width: 0.5, color: Color(0xFFFF000000)),
-                top: BorderSide(width: 0.5, color: Color(0xFFFF000000)),
-              ),
-            ),
-          )
+          menuItems,
         ],
       ),
     );
