@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../Shared/MenuButton.dart';
 import '../Shared/TopHeader.dart';
+import '../Shared/BorderContainer.dart';
 
 class NewGamePage extends StatelessWidget {
   final String title = "Start Game";
@@ -16,10 +17,12 @@ class NewGamePage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           TopHeader(title),
-          MenuButton(
-            name: 'Go Back',
-            onMenuItemPressed: onMenuItemPressed,
-          )
+          BorderContainer(
+            child: MenuButton(
+              name: 'Go Back',
+              onMenuItemPressed: onMenuItemPressed,
+            ),
+          ),
         ],
       ),
     );
