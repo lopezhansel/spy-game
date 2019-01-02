@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './Shared/MenuButton.dart';
+import '../Shared/MenuButton.dart';
 
 class HomePage extends StatelessWidget {
   static String title = "Welcome to Spyfall";

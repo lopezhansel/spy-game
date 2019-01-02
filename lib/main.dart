@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './HomePage.dart';
-import './NewGamePage.dart';
-import './JoinGamePage.dart';
+import './Screens/HomeScreen.dart';
+import './Screens/CreateGameScreen.dart';
+import './Screens/JoinGamePage.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,

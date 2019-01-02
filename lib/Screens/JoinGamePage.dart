@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import './Shared/MenuButton.dart';
+import '../Shared/MenuButton.dart';
+import '../Shared/InputField.dart';
 
-class NewGamePage extends StatelessWidget {
-  static String title = "Start Game";
+class JoinGamePage extends StatelessWidget {
+  static String title = "Join a Game";
 
   final Function onMenuItemPressed;
 
-  NewGamePage({this.onMenuItemPressed});
+  JoinGamePage({this.onMenuItemPressed});
 
   final Container welcomeCmp = Container(
     height: 40,
@@ -28,6 +29,14 @@ class NewGamePage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           welcomeCmp,
+          InputField(
+            placeHolder: 'Enter Access Code',
+            onMenuItemPressed: onMenuItemPressed,
+          ),
+          InputField(
+            placeHolder: 'Enter Your Name',
+            onMenuItemPressed: onMenuItemPressed,
+          ),
           MenuButton(
             name: 'Go Back',
             onMenuItemPressed: onMenuItemPressed,
