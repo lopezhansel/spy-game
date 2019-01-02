@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import '../Shared/MenuButton.dart';
+import '../Shared/ButtonRow.dart';
 import '../Shared/TopHeader.dart';
 import '../Shared/BorderContainer.dart';
 
 class NewGamePage extends StatelessWidget {
   final String title = "Start Game";
   final Function onMenuItemPressed;
+  final menuItems = ["Create Game", "Go Back"];
 
   NewGamePage({this.onMenuItemPressed});
 
@@ -18,9 +19,9 @@ class NewGamePage extends StatelessWidget {
         children: <Widget>[
           TopHeader(title),
           BorderContainer(
-            child: MenuButton(
-              name: 'Go Back',
-              onMenuItemPressed: onMenuItemPressed,
+            child: ButtonRow(
+              menuItems: menuItems,
+              onButtonPress: onMenuItemPressed,
             ),
           ),
         ],

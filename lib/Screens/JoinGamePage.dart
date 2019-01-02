@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import '../Shared/MenuButton.dart';
 import '../Shared/InputField.dart';
 import '../Shared/TopHeader.dart';
 import '../Shared/BorderContainer.dart';
+import '../Shared/ButtonRow.dart';
 
 class JoinGamePage extends StatelessWidget {
   final String title = "Join a Game";
   final Function onMenuItemPressed;
+  final List<String> menuItems = ["Join Game", "Go Back"];
 
   JoinGamePage({this.onMenuItemPressed});
 
@@ -29,9 +30,9 @@ class JoinGamePage extends StatelessWidget {
                   placeHolder: 'Enter Your Name',
                   onMenuItemPressed: onMenuItemPressed,
                 ),
-                MenuButton(
-                  name: 'Go Back',
-                  onMenuItemPressed: onMenuItemPressed,
+                ButtonRow(
+                  menuItems: menuItems,
+                  onButtonPress: onMenuItemPressed,
                 ),
               ],
             ),
