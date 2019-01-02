@@ -60,6 +60,7 @@ class _RouterState extends State<Router> {
 
   Pages getPageEnum(String name) {
     switch (name) {
+      case "Leave Game":
       case "Go Back":
         return Pages.HOME;
         break;
@@ -68,6 +69,9 @@ class _RouterState extends State<Router> {
         break;
       case "New Game":
         return Pages.START_NEW_GAME;
+        break;
+      case "Create Game":
+        return Pages.WAIT_FOR_PLAYLERS;
         break;
     }
     return Pages.HOME;
