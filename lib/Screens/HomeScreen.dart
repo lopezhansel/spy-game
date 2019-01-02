@@ -1,26 +1,13 @@
 import 'package:flutter/material.dart';
 import '../Shared/MenuButton.dart';
+import '../Shared/TopHeader.dart';
 
 class HomePage extends StatelessWidget {
-  static String title = "Welcome to Spyfall";
-
-  Function onMenuPress;
+  final String title = "Welcome to Spyfall";
+  final  _menuItems = ["New Game", "Join Game"];
+  final Function onMenuPress;
 
   HomePage({this.onMenuPress});
-
-  final Container welcomeCmp = Container(
-    height: 40,
-    child: Text(
-      title,
-      style: TextStyle(
-        color: Colors.grey[600],
-        fontSize: 23,
-        fontFamily: "Raleway",
-      ),
-    ),
-  );
-
-  static const _menuItems = ["New Game", "Join Game"];
 
   Widget get menuItems {
     var menu = _menuItems
@@ -51,7 +38,7 @@ class HomePage extends StatelessWidget {
       padding: EdgeInsets.all(20),
       child: Column(
         children: <Widget>[
-          welcomeCmp,
+          TopHeader(title),
           menuItems,
         ],
       ),
