@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './Screens/HomeScreen.dart';
 import './Screens/CreateGameScreen.dart';
 import './Screens/JoinGameScreen.dart';
+import './Screens/WaitScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -32,10 +33,11 @@ enum Pages {
   HOME,
   START_NEW_GAME,
   JOIN_GAME,
+  WAIT_FOR_PLAYLERS,
 }
 
 class _RouterState extends State<Router> {
-  Pages _currPage = Pages.JOIN_GAME;
+  Pages _currPage = Pages.HOME;
 
   Widget get currPage {
     switch (_currPage) {
@@ -49,6 +51,9 @@ class _RouterState extends State<Router> {
         break;
       case Pages.JOIN_GAME:
         return JoinGameScreen(onMenuItemPressed: this.goToPage);
+        break;
+      case Pages.WAIT_FOR_PLAYLERS:
+        return WaitScreen(onMenuItemPressed: this.goToPage);
         break;
     }
   }
