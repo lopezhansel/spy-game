@@ -3,12 +3,12 @@ import '../Shared/ButtonRow.dart';
 import '../Shared/TopHeader.dart';
 import '../Shared/BorderContainer.dart';
 
-class NewGamePage extends StatelessWidget {
+class CreateGameScreen extends StatelessWidget {
   final String title = "Start Game";
   final Function onMenuItemPressed;
   final menuItems = ["Create Game", "Go Back"];
 
-  NewGamePage({this.onMenuItemPressed});
+  CreateGameScreen({this.onMenuItemPressed});
 
   @override
   Widget build(BuildContext context) {

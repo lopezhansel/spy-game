@@ -3,12 +3,12 @@ import '../Shared/TopHeader.dart';
 import '../Shared/BorderContainer.dart';
 import '../Shared/ButtonRow.dart';
 
-class HomePage extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
   final String title = "Welcome to Spyfall";
   final List<String> menuItems = ["New Game", "Join Game"];
   final Function onMenuPress;
 
-  HomePage({this.onMenuPress});
+  HomeScreen({this.onMenuPress});
 
   @override
   Widget build(BuildContext context) {

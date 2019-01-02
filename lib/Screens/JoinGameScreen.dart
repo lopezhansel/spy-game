@@ -4,12 +4,12 @@ import '../Shared/TopHeader.dart';
 import '../Shared/BorderContainer.dart';
 import '../Shared/ButtonRow.dart';
 
-class JoinGamePage extends StatelessWidget {
+class JoinGameScreen extends StatelessWidget {
   final String title = "Join a Game";
   final Function onMenuItemPressed;
   final List<String> menuItems = ["Join Game", "Go Back"];
 
-  JoinGamePage({this.onMenuItemPressed});
+  JoinGameScreen({this.onMenuItemPressed});
 
   @override
   Widget build(BuildContext context) {
