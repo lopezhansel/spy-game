@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Shared/SpyfallPage.dart';
 import '../Shared/TopHeader.dart';
 import '../Shared/BorderContainer.dart';
 import '../Shared/ActionBar.dart';
@@ -12,8 +13,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(20),
+    return SpyfallPage(
       child: Column(
         children: <Widget>[
           TopHeader(title),

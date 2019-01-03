@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Shared/SpyfallPage.dart';
 import '../Shared/ActionBar.dart';
 import '../Shared/TopHeader.dart';
 import '../Shared/BorderContainer.dart';
@@ -13,9 +14,7 @@ class WaitScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(20),
-      alignment: Alignment.center,
+    return SpyfallPage(
       child: Column(
         children: <Widget>[
           TopHeader(title),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Shared/SpyfallPage.dart';
 import '../Shared/InputField.dart';
 import '../Shared/TopHeader.dart';
 import '../Shared/BorderContainer.dart';
@@ -13,9 +14,7 @@ class JoinGameScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment(0.0, 0.0),
-      padding: EdgeInsets.all(20),
+    return SpyfallPage(
       child: Column(
         children: <Widget>[
           TopHeader(title),
