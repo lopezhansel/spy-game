@@ -31,7 +31,7 @@ class _MenuButton extends State<MenuButton> {
         const duration = Duration(milliseconds: 50);
         Future.delayed(duration, () {
           toggleHighlight();
-          widget.onMenuItemPressed(name);
+          widget.onMenuItemPressed();
         });
       },
       child: Container(

@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
-import '../Shared/SpyfallPage.dart';
-import '../Shared/InputField.dart';
-import '../Shared/TopHeader.dart';
-import '../Shared/BorderContainer.dart';
-import '../Shared/ActionBar.dart';
+import 'package:hello_world/Shared/Navigate.dart';
+import 'package:hello_world/Shared/SpyfallPage.dart';
+import 'package:hello_world/Shared/InputField.dart';
+import 'package:hello_world/Shared/TopHeader.dart';
+import 'package:hello_world/Shared/BorderContainer.dart';
+import 'package:hello_world/Shared/ActionBar.dart';
 
 class JoinGameScreen extends StatelessWidget {
   final String title = "Join a Game";
   final Function onMenuItemPressed;
-  final List<String> menuItems = ["Join Game", "Go Back"];
 
   JoinGameScreen({this.onMenuItemPressed});
 
   @override
   Widget build(BuildContext context) {
+    Navigate navigate = Navigate.of(context);
+
+    final List<MenuItem> menuItems = [
+      MenuItem("Join Game", () => navigate.goToPage(Pages.PRE_GAME_SCREEN)),
+      MenuItem("Go Back", () => navigate.goToPage(Pages.HOME_SCREEN)),
+    ];
+
     return SpyfallPage(
       child: Column(
         children: <Widget>[
@@ -23,16 +30,11 @@ class JoinGameScreen extends StatelessWidget {
               children: <Widget>[
                 InputField(
                   placeHolder: 'Enter Access Code',
-                  onMenuItemPressed: onMenuItemPressed,
                 ),
                 InputField(
                   placeHolder: 'Enter Your Name',
-                  onMenuItemPressed: onMenuItemPressed,
                 ),
-                ActionBar(
-                  menuItems: menuItems,
-                  onButtonPress: onMenuItemPressed,
-                ),
+                ActionBar(menuItems),
               ],
             ),
           )

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Shared/SpyfallPage.dart';
+import 'package:hello_world/Shared/SpyfallPage.dart';
 
 class InvitationScreen extends StatelessWidget {
   @override
