@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import './Screens/HomeScreen.dart';
-import './Screens/CreateGameScreen.dart';
-import './Screens/JoinGameScreen.dart';
-import './Screens/WaitScreen.dart';
+import './HomeScreen/HomeScreen.dart';
+import './CreateGameSreen/CreateGameScreen.dart';
+import './JoinGameScreen/JoinGameScreen.dart';
+import './PreGameScreen/PreGameScreen.dart';
 
 void main() => runApp(MyApp());
 
