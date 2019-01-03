@@ -3,6 +3,8 @@ import './HomeScreen/HomeScreen.dart';
 import './CreateGameSreen/CreateGameScreen.dart';
 import './JoinGameScreen/JoinGameScreen.dart';
 import './PreGameScreen/PreGameScreen.dart';
+import './InvitationScreen/InvitationScreen.dart';
+import './OngoingGameScreen/OngoingGameScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,9 +33,11 @@ class Router extends StatefulWidget {
 
 enum Pages {
   HOME,
-  START_NEW_GAME,
-  JOIN_GAME,
-  WAIT_FOR_PLAYLERS,
+  CREATE_GAME_SCREEN,
+  JOIN_GAME_SCREEN,
+  PRE_GAME_SCREEN,
+  INVITATION_SCREEN,
+  ONGOING_GAME_SCREEN,
 }
 
 class _RouterState extends State<Router> {
@@ -46,14 +50,20 @@ class _RouterState extends State<Router> {
           onMenuPress: this.goToPage,
         );
         break;
-      case Pages.START_NEW_GAME:
+      case Pages.CREATE_GAME_SCREEN:
         return CreateGameScreen(onMenuItemPressed: this.goToPage);
         break;
-      case Pages.JOIN_GAME:
+      case Pages.JOIN_GAME_SCREEN:
         return JoinGameScreen(onMenuItemPressed: this.goToPage);
         break;
-      case Pages.WAIT_FOR_PLAYLERS:
+      case Pages.PRE_GAME_SCREEN:
         return WaitScreen(onMenuItemPressed: this.goToPage);
+        break;
+      case Pages.INVITATION_SCREEN:
+        return InvitationScreen();
+        break;
+      case Pages.ONGOING_GAME_SCREEN:
+        return OngoingGameScreen();
         break;
     }
   }
@@ -63,18 +73,18 @@ class _RouterState extends State<Router> {
       case "Leave Game":
       case "Go Back":
         return Pages.HOME;
-        break;
       case "Join Game":
-        return Pages.JOIN_GAME;
-        break;
+        return Pages.JOIN_GAME_SCREEN;
       case "New Game":
-        return Pages.START_NEW_GAME;
-        break;
+        return Pages.CREATE_GAME_SCREEN;
+      case "Start Game":
+        print('Start Game HIt');
+        return Pages.ONGOING_GAME_SCREEN;
       case "Create Game":
-        return Pages.WAIT_FOR_PLAYLERS;
-        break;
+        return Pages.PRE_GAME_SCREEN;
+      default:
+        return Pages.HOME;
     }
-    return Pages.HOME;
   }
 
   void goToPage(String buttonName) {
