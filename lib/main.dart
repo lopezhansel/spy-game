@@ -33,7 +33,7 @@ class Router extends StatefulWidget {
 }
 
 class _RouterState extends State<Router> {
-  Pages currPage = Pages.ONGOING_GAME_SCREEN;
+  Pages currPage = Pages.HOME_SCREEN;
 
   Widget get currWidget {
     switch (currPage) {
