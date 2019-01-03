@@ -38,18 +38,16 @@ class _RouterState extends State<Router> {
   Widget get currPage {
     switch (_currPage) {
       case Pages.HOME_SCREEN:
-        return HomeScreen(
-          onMenuPress: this._goToPage,
-        );
+        return HomeScreen();
         break;
       case Pages.CREATE_GAME_SCREEN:
-        return CreateGameScreen(onMenuItemPressed: this._goToPage);
+        return CreateGameScreen();
         break;
       case Pages.JOIN_GAME_SCREEN:
-        return JoinGameScreen(onMenuItemPressed: this._goToPage);
+        return JoinGameScreen();
         break;
       case Pages.PRE_GAME_SCREEN:
-        return WaitScreen(onMenuItemPressed: this._goToPage);
+        return WaitScreen();
         break;
       case Pages.INVITATION_SCREEN:
         return InvitationScreen();

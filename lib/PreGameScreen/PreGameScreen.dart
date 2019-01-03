@@ -8,9 +8,6 @@ import 'package:hello_world/Shared/BorderContainer.dart';
 class WaitScreen extends StatelessWidget {
   final String title = "Waiting for other players..";
   final String accessCode = "abc123";
-  final Function onMenuItemPressed;
-
-  WaitScreen({this.onMenuItemPressed});
 
   @override
   Widget build(BuildContext context) {

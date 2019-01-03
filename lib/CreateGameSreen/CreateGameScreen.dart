@@ -7,9 +7,6 @@ import 'package:hello_world/Shared/BorderContainer.dart';
 
 class CreateGameScreen extends StatelessWidget {
   final String title = "Create A New Game";
-  final Function onMenuItemPressed;
-
-  CreateGameScreen({this.onMenuItemPressed});
 
   @override
   Widget build(BuildContext context) {

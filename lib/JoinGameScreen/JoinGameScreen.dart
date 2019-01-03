@@ -8,9 +8,6 @@ import 'package:hello_world/Shared/ActionBar.dart';
 
 class JoinGameScreen extends StatelessWidget {
   final String title = "Join a Game";
-  final Function onMenuItemPressed;
-
-  JoinGameScreen({this.onMenuItemPressed});
 
   @override
   Widget build(BuildContext context) {

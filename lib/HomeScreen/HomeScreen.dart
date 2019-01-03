@@ -7,9 +7,6 @@ import 'package:hello_world/Shared/ActionBar.dart';
 
 class HomeScreen extends StatelessWidget {
   final String title = "Welcome to Spyfall";
-  final Function onMenuPress;
-
-  HomeScreen({this.onMenuPress});
 
   @override
   Widget build(BuildContext context) {
