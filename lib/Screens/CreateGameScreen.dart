@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Shared/ButtonRow.dart';
+import '../Shared/ActionBar.dart';
 import '../Shared/TopHeader.dart';
 import '../Shared/BorderContainer.dart';
 
@@ -19,7 +19,7 @@ class CreateGameScreen extends StatelessWidget {
         children: <Widget>[
           TopHeader(title),
           BorderContainer(
-            child: ButtonRow(
+            child: ActionBar(
               menuItems: menuItems,
               onButtonPress: onMenuItemPressed,
             ),

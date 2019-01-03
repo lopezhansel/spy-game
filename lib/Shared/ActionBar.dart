@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import './MenuButton.dart';
 
-class ButtonRow extends StatelessWidget {
+class ActionBar extends StatelessWidget {
   final List<String> menuItems;
   final Function onButtonPress;
 
-  ButtonRow({this.menuItems, this.onButtonPress});
+  ActionBar({this.menuItems, this.onButtonPress});
 
   @override
   Widget build(BuildContext context) {

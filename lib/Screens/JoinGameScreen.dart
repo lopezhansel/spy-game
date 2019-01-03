@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../Shared/InputField.dart';
 import '../Shared/TopHeader.dart';
 import '../Shared/BorderContainer.dart';
-import '../Shared/ButtonRow.dart';
+import '../Shared/ActionBar.dart';
 
 class JoinGameScreen extends StatelessWidget {
   final String title = "Join a Game";
@@ -30,7 +30,7 @@ class JoinGameScreen extends StatelessWidget {
                   placeHolder: 'Enter Your Name',
                   onMenuItemPressed: onMenuItemPressed,
                 ),
-                ButtonRow(
+                ActionBar(
                   menuItems: menuItems,
                   onButtonPress: onMenuItemPressed,
                 ),

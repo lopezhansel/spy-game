@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../Shared/TopHeader.dart';
 import '../Shared/BorderContainer.dart';
-import '../Shared/ButtonRow.dart';
+import '../Shared/ActionBar.dart';
 
 class HomeScreen extends StatelessWidget {
   final String title = "Welcome to Spyfall";
@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
         children: <Widget>[
           TopHeader(title),
           BorderContainer(
-            child: ButtonRow(
+            child: ActionBar(
               menuItems: menuItems,
               onButtonPress: onMenuPress,
             ),
