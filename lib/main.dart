@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import './HomeScreen/HomeScreen.dart';
-import './CreateGameSreen/CreateGameScreen.dart';
-import './JoinGameScreen/JoinGameScreen.dart';
-import './PreGameScreen/PreGameScreen.dart';
-import './InvitationScreen/InvitationScreen.dart';
-import './OngoingGameScreen/OngoingGameScreen.dart';
-import './Shared/Navigate.dart';
+import 'package:hello_world/HomeScreen/HomeScreen.dart';
+import 'package:hello_world/CreateGameSreen/CreateGameScreen.dart';
+import 'package:hello_world/JoinGameScreen/JoinGameScreen.dart';
+import 'package:hello_world/PreGameScreen/PreGameScreen.dart';
+import 'package:hello_world/InvitationScreen/InvitationScreen.dart';
+import 'package:hello_world/OngoingGameScreen/OngoingGameScreen.dart';
+import 'package:hello_world/Shared/Navigate.dart';
 
 void main() => runApp(MyApp());
 
@@ -33,7 +33,7 @@ class Router extends StatefulWidget {
 }
 
 class _RouterState extends State<Router> {
-  Pages currPage = Pages.HOME_SCREEN;
+  Pages currPage = Pages.ONGOING_GAME_SCREEN;
 
   Widget get currWidget {
     switch (currPage) {
