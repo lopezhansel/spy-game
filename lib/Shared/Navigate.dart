@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 enum Pages {
-  HOME,
+  HOME_SCREEN,
   CREATE_GAME_SCREEN,
   JOIN_GAME_SCREEN,
   PRE_GAME_SCREEN,

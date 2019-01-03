@@ -33,11 +33,11 @@ class Router extends StatefulWidget {
 }
 
 class _RouterState extends State<Router> {
-  Pages _currPage = Pages.HOME;
+  Pages _currPage = Pages.HOME_SCREEN;
 
   Widget get currPage {
     switch (_currPage) {
-      case Pages.HOME:
+      case Pages.HOME_SCREEN:
         return HomeScreen(
           onMenuPress: this._goToPage,
         );
@@ -64,7 +64,7 @@ class _RouterState extends State<Router> {
     switch (name) {
       case "Leave Game":
       case "Go Back":
-        return Pages.HOME;
+        return Pages.HOME_SCREEN;
       case "Join Game":
         return Pages.JOIN_GAME_SCREEN;
       case "New Game":
@@ -74,7 +74,7 @@ class _RouterState extends State<Router> {
       case "Create Game":
         return Pages.PRE_GAME_SCREEN;
       default:
-        return Pages.HOME;
+        return Pages.HOME_SCREEN;
     }
   }
 
