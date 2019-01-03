@@ -5,6 +5,7 @@ import './JoinGameScreen/JoinGameScreen.dart';
 import './PreGameScreen/PreGameScreen.dart';
 import './InvitationScreen/InvitationScreen.dart';
 import './OngoingGameScreen/OngoingGameScreen.dart';
+import './Shared/Navigate.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,15 +32,6 @@ class Router extends StatefulWidget {
   _RouterState createState() => _RouterState();
 }
 
-enum Pages {
-  HOME,
-  CREATE_GAME_SCREEN,
-  JOIN_GAME_SCREEN,
-  PRE_GAME_SCREEN,
-  INVITATION_SCREEN,
-  ONGOING_GAME_SCREEN,
-}
-
 class _RouterState extends State<Router> {
   Pages _currPage = Pages.HOME;
 
@@ -47,17 +39,17 @@ class _RouterState extends State<Router> {
     switch (_currPage) {
       case Pages.HOME:
         return HomeScreen(
-          onMenuPress: this.goToPage,
+          onMenuPress: this._goToPage,
         );
         break;
       case Pages.CREATE_GAME_SCREEN:
-        return CreateGameScreen(onMenuItemPressed: this.goToPage);
+        return CreateGameScreen(onMenuItemPressed: this._goToPage);
         break;
       case Pages.JOIN_GAME_SCREEN:
-        return JoinGameScreen(onMenuItemPressed: this.goToPage);
+        return JoinGameScreen(onMenuItemPressed: this._goToPage);
         break;
       case Pages.PRE_GAME_SCREEN:
-        return WaitScreen(onMenuItemPressed: this.goToPage);
+        return WaitScreen(onMenuItemPressed: this._goToPage);
         break;
       case Pages.INVITATION_SCREEN:
         return InvitationScreen();
@@ -78,7 +70,6 @@ class _RouterState extends State<Router> {
       case "New Game":
         return Pages.CREATE_GAME_SCREEN;
       case "Start Game":
-        print('Start Game HIt');
         return Pages.ONGOING_GAME_SCREEN;
       case "Create Game":
         return Pages.PRE_GAME_SCREEN;
@@ -87,7 +78,11 @@ class _RouterState extends State<Router> {
     }
   }
 
-  void goToPage(String buttonName) {
+  void goToPage(Pages page) {
+    setState(() => _currPage = page);
+  }
+
+  void _goToPage(String buttonName) {
     setState(() {
       _currPage = getPageEnum(buttonName);
     });
@@ -99,7 +94,10 @@ class _RouterState extends State<Router> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: currPage,
+      body: Navigate(
+        goToPage: goToPage,
+        child: currPage,
+      ),
     );
   }
 }
