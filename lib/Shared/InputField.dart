@@ -52,7 +52,7 @@ class _InputFieldState extends State<InputField> {
       ),
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        // color: _highlight ? Colors.grey : Colors.white,
+        color: Colors.grey[100],
         borderRadius: BorderRadius.all(Radius.circular(3)),
         border: Border.all(
             width: 0.5, color: _highlight ? Colors.blue : Colors.grey),

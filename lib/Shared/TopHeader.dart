@@ -8,12 +8,12 @@ class TopHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
+      padding: EdgeInsets.all(15),
       child: Text(
         title,
         style: TextStyle(
-          color: Colors.grey[600],
-          fontSize: 23,
+          color: Colors.grey[200],
+          fontSize: 30,
           fontFamily: "Raleway",
         ),
       ),
