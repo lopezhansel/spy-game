@@ -14,7 +14,7 @@ class JoinGameScreen extends StatelessWidget {
     Navigate navigate = Navigate.of(context);
 
     final List<MenuItem> menuItems = [
-      MenuItem("Join Game", () => navigate.goToPage(Pages.PRE_GAME_SCREEN)),
+      MenuItem("Join Game", () => navigate.goToPage(Pages.CREATE_GAME_SCREEN)),
       MenuItem("Go Back", () => navigate.goToPage(Pages.HOME_SCREEN)),
     ];
 

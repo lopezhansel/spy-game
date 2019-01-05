@@ -14,7 +14,7 @@ class OngoingGameScreen extends StatelessWidget {
     Navigate navigate = Navigate.of(context);
 
     final List<MenuItem> menuItems = [
-      MenuItem("End Game", () => navigate.goToPage(Pages.PRE_GAME_SCREEN)),
+      MenuItem("End Game", () => navigate.goToPage(Pages.CREATE_GAME_SCREEN)),
       MenuItem("Leave Game", () => navigate.goToPage(Pages.HOME_SCREEN)),
     ];
 

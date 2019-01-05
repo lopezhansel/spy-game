@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hello_world/HomeScreen/HomeScreen.dart';
 import 'package:hello_world/CreateGameSreen/CreateGameScreen.dart';
 import 'package:hello_world/JoinGameScreen/JoinGameScreen.dart';
-import 'package:hello_world/PreGameScreen/PreGameScreen.dart';
 import 'package:hello_world/InvitationScreen/InvitationScreen.dart';
 import 'package:hello_world/OngoingGameScreen/OngoingGameScreen.dart';
 import 'package:hello_world/Shared/Navigate.dart';
@@ -43,8 +42,6 @@ class _RouterState extends State<Router> {
         return CreateGameScreen();
       case Pages.JOIN_GAME_SCREEN:
         return JoinGameScreen();
-      case Pages.PRE_GAME_SCREEN:
-        return WaitScreen();
       case Pages.INVITATION_SCREEN:
         return InvitationScreen();
       case Pages.ONGOING_GAME_SCREEN:
