@@ -7,6 +7,7 @@ import 'package:hello_world/Shared/Navigate.dart';
 import 'package:hello_world/Shared/SpyfallPage.dart';
 import 'package:hello_world/Shared/ActionBar.dart';
 import 'package:hello_world/Shared/TopHeader.dart';
+import 'package:hello_world/Shared/Dividers.dart';
 
 class CreateGameScreen extends StatelessWidget {
   final String title = "Create A New Game";
@@ -35,8 +36,11 @@ class CreateGameScreen extends StatelessWidget {
         children: <Widget>[
           TopHeader(title),
           InviteWidget(accessCode: accessCode),
+          SectionDivider("Players"),
           PlayerList(players),
+          SectionDivider("Game Options"),
           GameOptions(menuItems: menuItems),
+          SectionDivider("Actions"),
           BorderContainer(
             child: ActionBar(menuItems),
           ),
