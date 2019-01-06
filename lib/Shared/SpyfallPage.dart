@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/Shared/Styles.dart';
 
 class SpyfallPage extends StatelessWidget {
   final Widget child;
@@ -8,7 +9,7 @@ class SpyfallPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xff34495e),
+      color: MyColors.wetAsphalt,
       alignment: Alignment(0.0, 0.0),
       padding: EdgeInsets.all(20),
       child: child,

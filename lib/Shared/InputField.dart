@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/Shared/Styles.dart';
 
 class InputField extends StatefulWidget {
   final String placeHolder;
   final Function onMenuItemPressed;
 
-  InputField({Key key, this.placeHolder, this.onMenuItemPressed}) : super(key: key);
+  InputField({Key key, this.placeHolder, this.onMenuItemPressed})
+      : super(key: key);
 
   @override
-  _InputFieldState createState() =>
-      _InputFieldState(placeHolder: placeHolder, onMenuItemPressed: onMenuItemPressed);
+  _InputFieldState createState() => _InputFieldState(
+      placeHolder: placeHolder, onMenuItemPressed: onMenuItemPressed);
 }
 
 class _InputFieldState extends State<InputField> {
@@ -52,10 +54,12 @@ class _InputFieldState extends State<InputField> {
       ),
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: Colors.grey[100],
+        color: MyColors.clouds,
         borderRadius: BorderRadius.all(Radius.circular(3)),
         border: Border.all(
-            width: 0.5, color: _highlight ? Colors.blue : Colors.grey),
+          width: 0.5,
+          color: _highlight ? MyColors.emerald : MyColors.concrete,
+        ),
       ),
     );
   }

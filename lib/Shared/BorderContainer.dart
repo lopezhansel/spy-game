@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/Shared/Styles.dart';
 
 class BorderContainer extends StatelessWidget {
   final Widget child;
@@ -19,12 +20,13 @@ class BorderContainer extends StatelessWidget {
       child: child,
       padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
       decoration: BoxDecoration(
+        color: MyColors.midNightBlue,
         border: Border(
-          bottom: bottomBorder
-              ? BorderSide(width: 1.0, color: Color(0xFFEEEEEE))
+          right: bottomBorder
+              ? BorderSide(width: 1.0, color: MyColors.emerald)
               : BorderSide.none,
-          top: topBorder
-              ? BorderSide(width: 1.0, color: Color(0xFFEEEEEE))
+          left: topBorder
+              ? BorderSide(width: 1.0, color: MyColors.emerald)
               : BorderSide.none,
         ),
       ),

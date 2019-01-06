@@ -5,6 +5,7 @@ import 'package:hello_world/JoinGameScreen/JoinGameScreen.dart';
 import 'package:hello_world/InvitationScreen/InvitationScreen.dart';
 import 'package:hello_world/OngoingGameScreen/OngoingGameScreen.dart';
 import 'package:hello_world/Shared/Navigate.dart';
+import 'package:hello_world/Shared/Styles.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,7 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: MyColors.wetAsphalt,
+        primaryColorDark: MyColors.wetAsphalt,
+        primaryColorLight: MyColors.midNightBlue,
       ),
       home: Router(title: 'Spyfall'),
     );
@@ -46,7 +49,7 @@ class _RouterState extends State<Router> {
         return InvitationScreen();
       case Pages.ONGOING_GAME_SCREEN:
         return OngoingGameScreen();
-      default: 
+      default:
         return HomeScreen();
     }
   }

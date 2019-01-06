@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/Shared/Styles.dart';
+
+enum MenuButtonTypes {
+  basic,
+  hightlight,
+}
 
 class MenuButton extends StatefulWidget {
   final String name;
   final Function onMenuItemPressed;
+  MenuButtonTypes type; // TODO:
 
   MenuButton({Key key, this.name, this.onMenuItemPressed}) : super(key: key);
 
@@ -41,9 +48,8 @@ class _MenuButton extends State<MenuButton> {
         child: Text(name),
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: _highlight ? Colors.grey : Colors.white,
+          color: _highlight ? MyColors.silver : MyColors.clouds,
           borderRadius: BorderRadius.all(Radius.circular(3)),
-          border: Border.all(width: 0.5, color: Color(0xFFFF000000)),
         ),
       ),
     );

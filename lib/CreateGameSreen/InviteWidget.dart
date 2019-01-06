@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/Shared/Styles.dart';
 
 class InviteWidget extends StatelessWidget {
   final String accessCode;
@@ -14,7 +15,7 @@ class InviteWidget extends StatelessWidget {
           Text(
             "Invite Code: ",
             style: TextStyle(
-              color: Colors.grey[200],
+              color: MyColors.clouds,
               fontSize: 20,
               fontFamily: "Raleway",
             ),
@@ -22,7 +23,7 @@ class InviteWidget extends StatelessWidget {
           Text(
             "$accessCode",
             style: TextStyle(
-              color: Colors.grey[200],
+              color: MyColors.emerald,
               fontSize: 20,
               fontFamily: "Monospace",
             ),
