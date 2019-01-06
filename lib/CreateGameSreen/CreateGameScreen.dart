@@ -21,13 +21,20 @@ class CreateGameScreen extends StatelessWidget {
       MenuItem("Start Game", startGame),
       MenuItem("Cancel", goHomeScreen),
     ];
+    final List<Player> players = [
+      Player("Alpha"),
+      Player("Beta"),
+      Player("Charlie"),
+      Player("Delta"),
+      Player("Echo"),
+    ];
 
     return SpyfallPage(
       child: Column(
         children: <Widget>[
           TopHeader(title),
           InviteWidget(accessCode: accessCode),
-          PlayerList(),
+          PlayerList(players),
           GameOptions(menuItems: menuItems),
         ],
       ),
