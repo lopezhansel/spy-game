@@ -17,7 +17,7 @@ class CreateGameScreen extends StatelessWidget {
     Function startGame = () => navigate.goToPage(Pages.ONGOING_GAME_SCREEN);
     Function goHomeScreen = () => navigate.goToPage(Pages.HOME_SCREEN);
 
-    final List<MenuItem> menuItems = [
+    List<MenuItem> menuItems = [
       MenuItem("Start Game", startGame),
       MenuItem("Cancel", goHomeScreen),
     ];
