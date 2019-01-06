@@ -22,19 +22,11 @@ class JoinGameScreen extends StatelessWidget {
       child: Column(
         children: <Widget>[
           TopHeader(title),
+          InputField(placeHolder: 'Enter Access Code'),
+          InputField(placeHolder: 'Enter Your Name'),
           BorderContainer(
-            child: Column(
-              children: <Widget>[
-                InputField(
-                  placeHolder: 'Enter Access Code',
-                ),
-                InputField(
-                  placeHolder: 'Enter Your Name',
-                ),
-                ActionBar(menuItems),
-              ],
-            ),
-          )
+            child: ActionBar(menuItems),
+          ),
         ],
       ),
     );

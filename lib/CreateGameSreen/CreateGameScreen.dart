@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_world/CreateGameSreen/GameOptions.dart';
 import 'package:hello_world/CreateGameSreen/InviteWidget.dart';
 import 'package:hello_world/CreateGameSreen/PlayerList.dart';
+import 'package:hello_world/Shared/BorderContainer.dart';
 import 'package:hello_world/Shared/Navigate.dart';
 import 'package:hello_world/Shared/SpyfallPage.dart';
 import 'package:hello_world/Shared/ActionBar.dart';
@@ -36,6 +37,9 @@ class CreateGameScreen extends StatelessWidget {
           InviteWidget(accessCode: accessCode),
           PlayerList(players),
           GameOptions(menuItems: menuItems),
+          BorderContainer(
+            child: ActionBar(menuItems),
+          ),
         ],
       ),
     );

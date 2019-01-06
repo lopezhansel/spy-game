@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/Shared/ActionBar.dart';
-import 'package:hello_world/Shared/BorderContainer.dart';
 import 'package:hello_world/Shared/InputField.dart';
 
 class GameOptions extends StatelessWidget {
@@ -10,7 +9,8 @@ class GameOptions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BorderContainer(
+    return Container(
+      padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
       child: Column(
         children: <Widget>[
           InputField(
@@ -22,7 +22,6 @@ class GameOptions extends StatelessWidget {
           InputField(
             placeHolder: 'Select Location',
           ),
-          ActionBar(menuItems),
         ],
       ),
     );
