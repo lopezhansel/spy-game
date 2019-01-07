@@ -3,7 +3,6 @@ import 'package:hello_world/Shared/Dividers.dart';
 import 'package:hello_world/Shared/Navigate.dart';
 import 'package:hello_world/Shared/SpyfallPage.dart';
 import 'package:hello_world/Shared/InputField.dart';
-import 'package:hello_world/Shared/TopHeader.dart';
 import 'package:hello_world/Shared/BorderContainer.dart';
 import 'package:hello_world/Shared/ActionBar.dart';
 
@@ -20,9 +19,9 @@ class JoinGameScreen extends StatelessWidget {
     ];
 
     return SpyfallPage(
+      title: title,
       child: Column(
         children: <Widget>[
-          TopHeader(title),
           SectionDivider('Game Info'),
           InputField(placeHolder: 'Enter Access Code'),
           InputField(placeHolder: 'Enter Your Name'),

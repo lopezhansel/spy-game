@@ -6,7 +6,6 @@ import 'package:hello_world/Shared/BorderContainer.dart';
 import 'package:hello_world/Shared/Navigate.dart';
 import 'package:hello_world/Shared/SpyfallPage.dart';
 import 'package:hello_world/Shared/ActionBar.dart';
-import 'package:hello_world/Shared/TopHeader.dart';
 import 'package:hello_world/Shared/Dividers.dart';
 
 class CreateGameScreen extends StatelessWidget {
@@ -32,9 +31,9 @@ class CreateGameScreen extends StatelessWidget {
     ];
 
     return SpyfallPage(
+      title: title,
       child: Column(
         children: <Widget>[
-          TopHeader(title),
           InviteWidget(accessCode: accessCode),
           SectionDivider("Players"),
           PlayerList(players),
