@@ -23,10 +23,10 @@ class BorderContainer extends StatelessWidget {
         color: MyColors.midNightBlue,
         border: Border(
           right: bottomBorder
-              ? BorderSide(width: 1.0, color: MyColors.emerald)
+              ? BorderSide(width: 2.0, color: MyColors.emerald)
               : BorderSide.none,
           left: topBorder
-              ? BorderSide(width: 1.0, color: MyColors.emerald)
+              ? BorderSide(width: 2.0, color: MyColors.emerald)
               : BorderSide.none,
         ),
       ),
