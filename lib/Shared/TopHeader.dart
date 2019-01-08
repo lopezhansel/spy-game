@@ -4,7 +4,9 @@ import 'package:hello_world/Shared/Styles.dart';
 class TopHeader extends StatelessWidget {
   final String title;
 
-  TopHeader(this.title);
+  final EdgeInsets margin;
+
+  TopHeader(this.title, {this.margin = const EdgeInsets.fromLTRB(0, 0, 0, 25)});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class TopHeader extends StatelessWidget {
       decoration: BoxDecoration(color: MyColors.clouds),
       alignment: Alignment(0.0, 0.0),
       padding: EdgeInsets.all(5),
-      margin: EdgeInsets.fromLTRB(0, 0, 0, 25),
+      margin: margin,
       child: Text(
         title,
         style: TextStyle(

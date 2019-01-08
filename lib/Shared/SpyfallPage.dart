@@ -3,11 +3,18 @@ import 'package:hello_world/Shared/Styles.dart';
 import 'package:hello_world/Shared/TopHeader.dart';
 
 class SpyfallPage extends StatelessWidget {
-  static EdgeInsets padding = EdgeInsets.all(20);
+  final EdgeInsets padding;
   final Widget child;
   final String title;
 
-  SpyfallPage({this.child, this.title = ""});
+  final EdgeInsets margin;
+
+  SpyfallPage({
+    this.child,
+    this.title = "",
+    this.padding = const EdgeInsets.all(20),
+    this.margin = const EdgeInsets.fromLTRB(0, 0, 0, 25),
+  });
 
   Widget get body {
     bool noTitle = title.length == 0;
@@ -15,7 +22,10 @@ class SpyfallPage extends StatelessWidget {
         ? child
         : Column(
             children: <Widget>[
-              TopHeader(title),
+              TopHeader(
+                title,
+                margin: margin,
+              ),
               Container(
                 alignment: Alignment(0.0, 0.0),
                 padding: padding,
@@ -27,10 +37,8 @@ class SpyfallPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool hasTitle = title.length > 0;
-
     return Container(
-      padding: hasTitle ? EdgeInsets.all(0) : padding,
+      padding: padding,
       color: MyColors.wetAsphalt,
       alignment: Alignment(0.0, 0.0),
       child: body,
