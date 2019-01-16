@@ -19,11 +19,10 @@ class TopHeader extends StatelessWidget {
         title,
         style: TextStyle(
           color: MyColors.midNightBlue,
-          fontSize: 30,
-          fontFamily: "Monospace",
+          fontSize: 36,
+          fontFamily: "Raleway",
           fontWeight: FontWeight.w400,
           fontStyle: FontStyle.normal,
-          decoration: TextDecoration.underline,
         ),
       ),
     );
