@@ -7,7 +7,7 @@ import 'package:hello_world/Shared/BorderContainer.dart';
 import 'package:hello_world/Shared/ActionBar.dart';
 
 class JoinGameScreen extends StatelessWidget {
-  final String title = "Join a Game";
+  final String title = "Join Game";
 
   @override
   Widget build(BuildContext context) {

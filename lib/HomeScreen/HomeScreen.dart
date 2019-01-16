@@ -5,7 +5,7 @@ import 'package:hello_world/Shared/BorderContainer.dart';
 import 'package:hello_world/Shared/ActionBar.dart';
 
 class HomeScreen extends StatelessWidget {
-  final String title = "Welcome to Spyfall";
+  final String title = "Spyfall";
 
   @override
   Widget build(BuildContext context) {
