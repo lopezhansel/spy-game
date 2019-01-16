@@ -12,7 +12,7 @@ class SpyfallPage extends StatelessWidget {
   SpyfallPage({
     this.child,
     this.title = "",
-    this.padding = const EdgeInsets.all(20),
+    this.padding = const EdgeInsets.fromLTRB(20, 0, 20, 0),
     this.margin = const EdgeInsets.fromLTRB(0, 0, 0, 25),
   });
 
@@ -38,7 +38,6 @@ class SpyfallPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: padding,
       color: MyColors.wetAsphalt,
       alignment: Alignment(0.0, 0.0),
       child: body,
